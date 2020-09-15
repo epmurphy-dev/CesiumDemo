@@ -1,0 +1,10 @@
+<ac-layer acFor="let circle of circles$" [show]="show" [context]="this">
+    <ac-cylinder-desc props="{
+        position: circle.position,
+        length : circle.height,
+        topRadius : circle.radius,
+        bottomRadius : circle.radius,
+        material : Cesium.Color.RED.withAlpha(0.2),
+        }">
+</ac-cylinder-desc>
+</ac-layer>  

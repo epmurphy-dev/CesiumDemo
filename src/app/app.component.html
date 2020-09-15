@@ -1,0 +1,28 @@
+<h1>ANGULAR CESIUM DEMO</h1>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    Settings
+  </mat-expansion-panel-header>
+
+  <mat-action-row>
+    <mat-slide-toggle [(ngModel)]="show_flightlines" (change)="toggle_flightlines()">Show Flightlines</mat-slide-toggle>
+    <mat-slide-toggle [(ngModel)]="show_fzb" (change)="toggle_fzb()">Show Boundaries</mat-slide-toggle>
+    <mat-slide-toggle [(ngModel)]="show_obstacles" (change)="toggle_obstacles()">Show Obstacles</mat-slide-toggle>
+    <mat-slide-toggle [(ngModel)]="show_waypoints" (change)="toggle_waypoints()">Show Waypoints</mat-slide-toggle>
+    <mat-slide-toggle [(ngModel)]="perspective" (change)="toggle_perspective()">{{get_perspective()}}</mat-slide-toggle>
+  </mat-action-row>
+</mat-expansion-panel>
+
+<ac-map>
+  <app-camera-twod #perspective_controller></app-camera-twod>
+  <keyboard-control-layer></keyboard-control-layer>
+  <app-path-lines #flight_lines></app-path-lines>
+  <polygon-layer-example #fzb>
+  </polygon-layer-example>
+  <circle-layer-example #obstacles>
+  </circle-layer-example>
+  <waypoints #waypoints>
+  </waypoints>
+</ac-map>
+
+<p>For demonstration purposes (don't look at the source code)</p>

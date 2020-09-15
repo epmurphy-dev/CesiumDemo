@@ -1,0 +1,9 @@
+<ac-layer acFor="let polyline of polylines$" [context]="this" [show]="show">
+    <ac-polyline-desc props="{
+              width : 2,
+              positions: polyline.positions,
+              material: , Cesium.Color.WHITE.withAlpha(0.4),
+              dashLength: 200,
+            }">
+    </ac-polyline-desc>
+</ac-layer>
